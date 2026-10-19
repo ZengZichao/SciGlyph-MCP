@@ -1,0 +1,80 @@
+# MCP Configuration Examples for SciGlyph MCP
+#
+# This file provides configuration snippets for various MCP clients.
+# 本文件提供各种 MCP 客户端的配置示例。
+#
+# After building the project (npm run build), use one of the following
+# configurations depending on your MCP client.
+#
+# 构建项目 (npm run build) 后，根据您的 MCP 客户端选择以下配置之一。
+
+# =============================================================================
+# 1. Cursor / Generic MCP Client (mcp-config.json)
+# =============================================================================
+
+# {
+#   "mcpServers": {
+#     "sciglyph": {
+#       "command": "node",
+#       "args": ["/absolute/path/to/SciGlyph-MCP/dist/index.js"],
+#       "env": {}
+#     }
+#   }
+# }
+
+# =============================================================================
+# 2. Claude Desktop (claude_desktop_config.json)
+# =============================================================================
+
+# {
+#   "mcpServers": {
+#     "sciglyph": {
+#       "command": "node",
+#       "args": ["/absolute/path/to/SciGlyph-MCP/dist/index.js"]
+#     }
+#   }
+# }
+
+# =============================================================================
+# 3. Claude Code (add to ~/.claude/mcp_settings.json or via CLI)
+# =============================================================================
+
+# claude mcp add sciglyph node /absolute/path/to/SciGlyph-MCP/dist/index.js
+
+# =============================================================================
+# 4. VS Code (with MCP extension)
+# =============================================================================
+
+# Add to VS Code settings.json:
+# {
+#   "mcp.servers": {
+#     "sciglyph": {
+#       "command": "node",
+#       "args": ["/absolute/path/to/SciGlyph-MCP/dist/index.js"]
+#     }
+#   }
+# }
+
+# =============================================================================
+# 5. npx (without global install)
+# =============================================================================
+
+# {
+#   "mcpServers": {
+#     "sciglyph": {
+#       "command": "npx",
+#       "args": ["-y", "sciglyph-mcp"]
+#     }
+#   }
+# }
+
+# =============================================================================
+# Notes / 注意事项
+# =============================================================================
+
+# - Replace /absolute/path/to/SciGlyph-MCP with your actual project path.
+# - 请将 /absolute/path/to/SciGlyph-MCP 替换为实际的项目路径。
+# - Make sure to run `npm install && npm run build` before first use.
+# - 首次使用前请确保运行 `npm install && npm run build`。
+# - The server communicates via stdio (stdin/stdout).
+# - 服务器通过 stdio（标准输入/输出）进行通信。

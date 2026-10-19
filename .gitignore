@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Reference clone
+_sciglyph_ref/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local MCP client config (use mcp-config.example.txt as reference)
+mcp-config.json
+
+# Environment files
+.env
+.env.local
+.env.*.local
